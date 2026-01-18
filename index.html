@@ -108,23 +108,45 @@
                 <!-- Hero Section -->
                 <section class="hero" id="hero">
                     <div class="hero-content">
-                        <div class="hero-text">
-                            <h1 class="hero-title">
-                                Hey, I'm <span class="gradient-text">Marcel</span>
-                            </h1>
-                            <p class="hero-subtitle">Full Stack Developer • Open Source Enthusiast • Problem Solver</p>
-                            <p class="hero-description">
-                                I build modern web applications and contribute to the open source community. 
-                                Passionate about clean code, scalable architecture, and great user experiences.
-                            </p>
-                            <div class="hero-cta">
-                                <a href="#projects" class="btn btn-primary">View My Work</a>
-                                <a href="#contact" class="btn btn-secondary">Get in Touch</a>
-                            </div>
-                        </div>
-                        <div class="hero-visual">
+                        <div class="hero-sidebar">
                             <div class="avatar-container">
                                 <img src="https://avatars.githubusercontent.com/u/187956479?v=4" alt="Marcel's Avatar" class="avatar">
+                            </div>
+                            <h1 class="profile-name">Marcel</h1>
+                            <p class="profile-title">Full Stack Developer</p>
+                            
+                            <div class="profile-badges">
+                                <span class="badge badge-gray">BASED IN</span>
+                                <span class="badge badge-blue">🇵🇱 POLAND</span>
+                                <span class="badge badge-gray">FOCUS</span>
+                                <span class="badge badge-purple">FULL STACK WEB</span>
+                                <span class="badge badge-gray">VIBE</span>
+                                <span class="badge badge-green">CLEAN &amp; FAST</span>
+                            </div>
+                            
+                            <div class="contact-badges">
+                                <div class="contact-badge-item">
+                                    <span class="contact-label">EMAIL</span>
+                                    <a href="mailto:mr@kitties.email" class="contact-value badge-orange">MR@KITTIES.EMAIL</a>
+                                </div>
+                                <div class="contact-badge-item">
+                                    <span class="contact-label">DISCORD</span>
+                                    <a href="https://discord.com" target="_blank" rel="noopener noreferrer" class="contact-value badge-indigo">PROFILE</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="hero-main">
+                            <div class="hero-section-content">
+                                <h2 class="hero-greeting">Hey, I'm <span class="gradient-text">Marcel</span> 👋</h2>
+                                <p class="hero-description">
+                                    A passionate developer based in Poland, dedicated to building scalable web applications 
+                                    and clean APIs. I focus on creating efficient solutions that make a difference.
+                                </p>
+                                <div class="hero-cta">
+                                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                                    <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -135,31 +157,42 @@
                     <div class="container">
                         <h2 class="section-title">About Me</h2>
                         <div class="about-content">
-                            <div class="about-text">
-                                <p>
-                                    I'm a passionate full stack developer from the tech community, dedicated to creating 
-                                    innovative solutions that make a difference. With experience across multiple technologies 
-                                    and frameworks, I focus on building scalable, maintainable applications. 
-                                </p>
-                                <p>
-                                    When I'm not coding, you'll find me exploring new technologies, contributing to open source 
-                                    projects, or collaborating with fellow developers. I believe in continuous learning and 
-                                    staying updated with the latest industry trends.
-                                </p>
-                                <div class="about-stats">
-                                    <div class="stat">
-                                        <div class="stat-number">5+</div>
-                                        <div class="stat-label">Languages</div>
-                                    </div>
-                                    <div class="stat">
-                                        <div class="stat-number">20+</div>
-                                        <div class="stat-label">Projects</div>
-                                    </div>
-                                    <div class="stat">
-                                        <div class="stat-number">100%</div>
-                                        <div class="stat-label">Commitment</div>
+                            <div class="about-info-grid">
+                                <div class="about-info-item">
+                                    <span class="about-emoji">🎯</span>
+                                    <div class="about-info-text">
+                                        <h3>Current Focus</h3>
+                                        <p>Building scalable web applications and clean, efficient APIs</p>
                                     </div>
                                 </div>
+                                <div class="about-info-item">
+                                    <span class="about-emoji">💪</span>
+                                    <div class="about-info-text">
+                                        <h3>Strengths</h3>
+                                        <p>Full stack development, problem solving, and system architecture</p>
+                                    </div>
+                                </div>
+                                <div class="about-info-item">
+                                    <span class="about-emoji">📚</span>
+                                    <div class="about-info-text">
+                                        <h3>Learning</h3>
+                                        <p>Always exploring new technologies and best practices</p>
+                                    </div>
+                                </div>
+                                <div class="about-info-item">
+                                    <span class="about-emoji">⚡</span>
+                                    <div class="about-info-text">
+                                        <h3>Mindset</h3>
+                                        <p>Clean code, fast performance, and continuous improvement</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="about-description">
+                                <p>
+                                    I'm a developer based in Poland who builds scalable web apps and clean APIs. 
+                                    With a focus on full stack web development, I create efficient solutions that 
+                                    combine solid architecture with excellent user experience.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -178,37 +211,79 @@
                 <!-- Skills Section -->
                 <section class="skills" id="skills">
                     <div class="container">
-                        <h2 class="section-title">Skills & Interests</h2>
-                        <div class="skills-grid">
-                            <div class="skill-card">
-                                <div class="skill-icon">💻</div>
-                                <h3>Frontend Development</h3>
-                                <p>HTML, CSS, JavaScript, React, Vue, TypeScript</p>
+                        <h2 class="section-title">Tech Stack</h2>
+                        <div class="tech-tabs">
+                            <button class="tech-tab active" data-tab="frontend">Frontend</button>
+                            <button class="tech-tab" data-tab="backend">Backend</button>
+                        </div>
+                        <div class="tech-content">
+                            <div class="tech-panel active" id="frontend">
+                                <div class="skills-grid">
+                                    <div class="skill-card">
+                                        <div class="skill-icon">⚛️</div>
+                                        <h3>React</h3>
+                                        <p>Building interactive UIs with React and modern hooks</p>
+                                    </div>
+                                    <div class="skill-card">
+                                        <div class="skill-icon">📘</div>
+                                        <h3>TypeScript</h3>
+                                        <p>Type-safe JavaScript for scalable applications</p>
+                                    </div>
+                                    <div class="skill-card">
+                                        <div class="skill-icon">🎨</div>
+                                        <h3>CSS/Tailwind</h3>
+                                        <p>Modern styling with CSS3 and utility frameworks</p>
+                                    </div>
+                                    <div class="skill-card">
+                                        <div class="skill-icon">🖼️</div>
+                                        <h3>HTML5</h3>
+                                        <p>Semantic markup and accessibility best practices</p>
+                                    </div>
+                                    <div class="skill-card">
+                                        <div class="skill-icon">💚</div>
+                                        <h3>Vue.js</h3>
+                                        <p>Progressive framework for building user interfaces</p>
+                                    </div>
+                                    <div class="skill-card">
+                                        <div class="skill-icon">📱</div>
+                                        <h3>Responsive Design</h3>
+                                        <p>Mobile-first, cross-browser compatible layouts</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="skill-card">
-                                <div class="skill-icon">⚙️</div>
-                                <h3>Backend Development</h3>
-                                <p>Node.js, Python, APIs, Databases, REST</p>
-                            </div>
-                            <div class="skill-card">
-                                <div class="skill-icon">🚀</div>
-                                <h3>DevOps & Tools</h3>
-                                <p>Git, Docker, CI/CD, GitHub Actions</p>
-                            </div>
-                            <div class="skill-card">
-                                <div class="skill-icon">📚</div>
-                                <h3>Open Source</h3>
-                                <p>Contributing to community projects and best practices</p>
-                            </div>
-                            <div class="skill-card">
-                                <div class="skill-icon">🎨</div>
-                                <h3>UI/UX Design</h3>
-                                <p>Responsive design, accessibility, modern aesthetics</p>
-                            </div>
-                            <div class="skill-card">
-                                <div class="skill-icon">🔍</div>
-                                <h3>Problem Solving</h3>
-                                <p>Debugging, optimization, clean code architecture</p>
+                            <div class="tech-panel" id="backend">
+                                <div class="skills-grid">
+                                    <div class="skill-card">
+                                        <div class="skill-icon">🟢</div>
+                                        <h3>Node.js</h3>
+                                        <p>Building scalable server-side applications</p>
+                                    </div>
+                                    <div class="skill-card">
+                                        <div class="skill-icon">🐍</div>
+                                        <h3>Python</h3>
+                                        <p>Backend development with Django and Flask</p>
+                                    </div>
+                                    <div class="skill-card">
+                                        <div class="skill-icon">🗄️</div>
+                                        <h3>Databases</h3>
+                                        <p>SQL and NoSQL database design and optimization</p>
+                                    </div>
+                                    <div class="skill-card">
+                                        <div class="skill-icon">🔌</div>
+                                        <h3>REST APIs</h3>
+                                        <p>RESTful API design and implementation</p>
+                                    </div>
+                                    <div class="skill-card">
+                                        <div class="skill-icon">🔐</div>
+                                        <h3>Authentication</h3>
+                                        <p>JWT, OAuth, and secure auth implementations</p>
+                                    </div>
+                                    <div class="skill-card">
+                                        <div class="skill-icon">🐳</div>
+                                        <h3>Docker</h3>
+                                        <p>Containerization and deployment workflows</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

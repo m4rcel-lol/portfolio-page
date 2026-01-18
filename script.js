@@ -268,6 +268,37 @@ class ProjectsLoader {
 }
 
 // ============================================
+// TECH TABS
+// ============================================
+
+class TechTabs {
+    constructor() {
+        this.tabs = document.querySelectorAll('.tech-tab');
+        this.panels = document.querySelectorAll('.tech-panel');
+        this.init();
+    }
+    
+    init() {
+        this.tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const targetTab = tab.getAttribute('data-tab');
+                
+                // Remove active class from all tabs and panels
+                this.tabs.forEach(t => t.classList.remove('active'));
+                this.panels.forEach(p => p.classList.remove('active'));
+                
+                // Add active class to clicked tab and corresponding panel
+                tab.classList.add('active');
+                const targetPanel = document.getElementById(targetTab);
+                if (targetPanel) {
+                    targetPanel.classList.add('active');
+                }
+            });
+        });
+    }
+}
+
+// ============================================
 // TOOLBAR NAVIGATION
 // ============================================
 
@@ -475,6 +506,7 @@ document.addEventListener('DOMContentLoaded', () => {
     new ThemeManager();
     new WindowManager();
     new ProjectsLoader();
+    new TechTabs();
     new ToolbarNavigation();
     new DockManager();
     new SmoothScroll();
