@@ -296,6 +296,37 @@ class ToolbarNavigation {
 }
 
 // ============================================
+// TECH STACK TABS
+// ============================================
+
+class TechStackTabs {
+    constructor() {
+        this.tabs = document.querySelectorAll('.tech-tab');
+        this.panels = document.querySelectorAll('.tech-panel');
+        this.init();
+    }
+    
+    init() {
+        this.tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const targetTab = tab.getAttribute('data-tab');
+                
+                // Remove active class from all tabs and panels
+                this.tabs.forEach(t => t.classList.remove('active'));
+                this.panels.forEach(p => p.classList.remove('active'));
+                
+                // Add active class to clicked tab and corresponding panel
+                tab.classList.add('active');
+                const targetPanel = document.getElementById(targetTab);
+                if (targetPanel) {
+                    targetPanel.classList.add('active');
+                }
+            });
+        });
+    }
+}
+
+// ============================================
 // DOCK INTERACTIONS
 // ============================================
 
@@ -476,6 +507,7 @@ document.addEventListener('DOMContentLoaded', () => {
     new WindowManager();
     new ProjectsLoader();
     new ToolbarNavigation();
+    new TechStackTabs();
     new DockManager();
     new SmoothScroll();
     new ScrollAnimations();
