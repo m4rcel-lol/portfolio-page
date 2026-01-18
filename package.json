@@ -1,0 +1,26 @@
+{
+  "name": "portfolio-page",
+  "version": "1.0.0",
+  "description": "Marcel's modern portfolio website with macOS Tahoe design",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server -p 8080 -o",
+    "build": "echo 'Static site - no build needed'",
+    "serve": "npx http-server",
+    "preview": "npx http-server -p 3000"
+  },
+  "keywords": [
+    "portfolio",
+    "personal-website",
+    "developer",
+    "macos-design",
+    "tahoe"
+  ],
+  "author":  "Marcel",
+  "license": "MIT",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/m4rcel-lol/portfolio-page"
+  }
+}
