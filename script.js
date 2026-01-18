@@ -283,6 +283,11 @@ class TechTabs {
             tab.addEventListener('click', () => {
                 const targetTab = tab.getAttribute('data-tab');
                 
+                if (!targetTab) {
+                    console.warn('Tab element missing data-tab attribute');
+                    return;
+                }
+                
                 // Remove active class from all tabs and panels
                 this.tabs.forEach(t => t.classList.remove('active'));
                 this.panels.forEach(p => p.classList.remove('active'));
@@ -292,6 +297,8 @@ class TechTabs {
                 const targetPanel = document.getElementById(targetTab);
                 if (targetPanel) {
                     targetPanel.classList.add('active');
+                } else {
+                    console.warn(`Panel with id "${targetTab}" not found`);
                 }
             });
         });
